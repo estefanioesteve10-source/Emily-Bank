@@ -1,7 +1,13 @@
 services:
   app:
     build: .
+    container_name: emily-banc-container
+    # Resolve o erro de EOF/Input no Docker
     stdin_open: true
     tty: true
+    # Remove o atraso (buffering) do Python nos logs
     environment:
-      - PYTHONUNBUFFERED=1  # ISSO GARANTE QUE NÃO HAJA ATRASO
+      - PYTHONUNBUFFERED=1
+    # Garante que o banco de dados seja salvo na pasta deles
+    volumes:
+      - .:/app
