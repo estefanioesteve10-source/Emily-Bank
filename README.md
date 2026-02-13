@@ -29,4 +29,5 @@ O **Emily Banc** é um sistema de gerenciamento de contas bancárias desenvolvid
 
 1. Clone o repositório:
    ```bash
-   git clone [
+   git clone https://github.com/estefanioesteve10-source/Emily-Bank.git
+2
