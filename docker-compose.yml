@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    environment:
+      - PYTHONUNBUFFERED=1  # ISSO GARANTE QUE NÃO HAJA ATRASO

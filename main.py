@@ -140,7 +140,7 @@ def consulta():
 def logica():
     iniciar_banco()
     while True:
-        print("\n1-Criar Conta | 2-Deposito | 3-Levantamento | 4-Transferência | 5-Consulta | 6-Sair")
+        print("\n1-Criar Conta | 2-Deposito | 3-Levantamento | 4-Transferência | 5-Consulta | 6-Sair", flush=True)
         opt = input('Escolha: ')
         if opt == '1': cadastro()
         elif opt == '2': deposit()
