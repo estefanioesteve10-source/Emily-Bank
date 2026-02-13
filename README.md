@@ -31,3 +31,4 @@ O **Emily Banc** é um sistema de gerenciamento de contas bancárias desenvolvid
    ```bash
    git clone https://github.com/estefanioesteve10-source/Emily-Bank.git
 2
+Projeto focado em Python e SQLite
