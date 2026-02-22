@@ -9,7 +9,7 @@ def deposit():
     cursor.execute('UPDATE clientes SET saldo = saldo + ?, num_depositos = num_depositos + 1 WHERE iban = ?', (valor, iban))
     if cursor.rowcount > 0:
         conn.commit()
-        print("Depósito concluído.")
+        print("O Depósito foi concluído.")
     else:
-        print("IBAN não encontrado.")
+        print("O IBAN não foi encontrado.")
     conn.close()

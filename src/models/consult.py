@@ -13,5 +13,5 @@ def consulta():
         print(f"IBAN: {row[0]}")
         print(f"Histórico: {row[3]} Transf | {row[4]} Dep | {row[5]} Lev")
     else:
-        print("Conta inexistente.")
+        print("A Conta é inexistente.")
     conn.close()
