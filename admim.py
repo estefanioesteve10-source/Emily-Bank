@@ -48,4 +48,4 @@ def painel_admin():
 
 if __name__ == "__main__":
     painel_admin()
-    input("Pressione Enter para sair...")
+    input("Pressione a tecla Enter para sair...")

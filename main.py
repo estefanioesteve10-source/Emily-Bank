@@ -86,7 +86,7 @@ def transferencia():
         res = cursor.fetchone()
         
         if not res or res[0] < valor:
-            print("Saldo insuficiente ou IBAN de origem inválido.")
+            print("O Saldo é insuficiente ou IBAN de origem inválido.")
             return
 
         # Início da Transação Atômica
