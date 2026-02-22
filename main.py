@@ -97,10 +97,10 @@ def transferencia():
         cursor.execute('UPDATE clientes SET saldo = saldo + ? WHERE iban = ?', (valor, iban_destino))
         
         if cursor.rowcount == 0:
-            raise Exception("Destinatário não encontrado.")
+            raise Exception("O Destinatário não foi encontrado.")
 
         conn.commit()
-        print(f"Transferência de {valor}€ realizada com sucesso!")
+        print(f"A Transferência de {valor}€ realizada com sucesso!")
 
     except Exception as e:
         conn.rollback() # Cancela tudo se der erro
