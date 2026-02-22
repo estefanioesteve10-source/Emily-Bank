@@ -1,4 +1,5 @@
 import sqlite3
+import uuid
 import random
 
 def gerar_iban():
@@ -10,11 +11,16 @@ def gerar_iban():
 def cadastro():
     nome = input('Digite o teu nome: ')
     iban = gerar_iban()
+    id_uuid = str(uuid.uuid7())
+    print(id_uuid)
 
-    conn = sqlite3.connect('../Emily_Banc.db')
+    conn = sqlite3.connect('Emily_Banc.db')
     cursor = conn.cursor()
+
+    print(id_uuid)
     try:
-        cursor.execute('INSERT INTO clientes (nome, iban) VALUES (?, ?)', (nome, iban))
+
+        cursor.execute('INSERT INTO clientes (id, nome, iban) VALUES (?, ?, ?)', (id_uuid, nome, iban))
         conn.commit()
         print(f"\nConta criada! Nome: {nome}")
         print(f"Seu IBAN oficial: {iban}")

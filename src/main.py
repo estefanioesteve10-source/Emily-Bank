@@ -12,7 +12,8 @@ def iniciar_banco():
     # IBAN agora é a PRIMARY KEY
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS clientes (
-            iban TEXT PRIMARY KEY,
+            id TEXT PRIMARY KEY,
+            iban TEXT UNIQUE NOT NULL,
             nome TEXT NOT NULL,
             saldo REAL DEFAULT 0,
             num_transferencias INTEGER DEFAULT 0,

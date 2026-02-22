@@ -5,7 +5,7 @@ def levantamento():
     iban_origem = input('Digite o SEU IBAN: ')
     valor = float(input('Valor a levantar: '))
 
-    conn = sqlite3.connect('../Emily_Banc.db')
+    conn = sqlite3.connect('Emily_Banc.db')
     cursor = conn.cursor()
 
     try:

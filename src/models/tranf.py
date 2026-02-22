@@ -6,7 +6,7 @@ def transferencia():
     iban_destino = input('Digite o IBAN do DESTINATÁRIO: ')
     valor = float(input('Valor a transferir: '))
 
-    conn = sqlite3.connect('../Emily_Banc.db')
+    conn = sqlite3.connect('Emily_Banc.db')
     cursor = conn.cursor()
 
     try:
