@@ -41,7 +41,7 @@ def painel_admin():
         print(f"RESUMO: {total_users} Clientes | Total em Custódia: {total_banco if total_banco else 0.0:.2f}€")
         
     except sqlite3.OperationalError:
-        print("Erro: O banco de dados ainda não foi criado ou a tabela não existe.")
+        print("Erro: O banco de dados ainda não foi criado ou a tabela não existe")
     finally:
         conn.close()
         print("="*95 + "\n")
