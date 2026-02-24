@@ -11,7 +11,7 @@ def gerar_iban():
 def cadastro():
     nome = input('Digite o teu nome: ')
     iban = gerar_iban()
-    id_uuid = str(uuid.uuid7())
+    id_uuid = str(uuid.uuid7())     # gerando a uuid
     print(id_uuid)
 
     conn = sqlite3.connect('Emily_Banc.db')
@@ -19,7 +19,7 @@ def cadastro():
 
     print(id_uuid)
     try:
-
+        # Inserindo os dados ao DB
         cursor.execute('INSERT INTO clientes (id, nome, iban) VALUES (?, ?, ?)', (id_uuid, nome, iban))
         conn.commit()
         print(f"\nConta criada! Nome: {nome}")

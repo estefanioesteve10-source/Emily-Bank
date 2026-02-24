@@ -9,7 +9,7 @@ from src.models.deposit import deposit
 def iniciar_banco():
     conn = sqlite3.connect('Emily_Banc.db')
     cursor = conn.cursor()
-    # IBAN agora é a PRIMARY KEY
+    # UUID agora é a PRIMARY KEY
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS clientes (
             id TEXT PRIMARY KEY,
